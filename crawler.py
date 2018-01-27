@@ -8,3 +8,7 @@ def get_next_target (s):
         url = ''
         end_quote = -1
     return url, end_quote
+
+def rest_of_string(s, position):
+    return s[position:]
+    
