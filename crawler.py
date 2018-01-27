@@ -10,5 +10,10 @@ def get_next_target (s):
     return url, end_quote
 
 def rest_of_string(s, position):
-    return s[position:]
+    string = str(s)
+    if position < len(string):
+        new_string = string[position:]
+    else:
+        new_string = ''
+    return new_string
     
