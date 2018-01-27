@@ -5,8 +5,8 @@ def get_next_target (s):
         end_quote = s.find('"', start_link + 1)      # int representing the position in string where the next target url ends
         url = s[start_quote + 1 : end_quote]
     else:
-        url = ''
-        end_quote = -1
+        url = None
+        end_quote = 0
     return url, end_quote
 
 def rest_of_string(s, position):
@@ -14,6 +14,6 @@ def rest_of_string(s, position):
     if position < len(string):
         new_string = string[position:]
     else:
-        new_string = ''
+        new_string = None
     return new_string
     
